@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+.menu{padding: 0%;
+list-style: none;
+text-align: center;
+}
+.menu-item{
+    display: inline-block;
+    background-color:antiquewhite;
+}
+.menu-link{
+    display: block;
+    padding: 1.5em 1em;
+}
+
+.card{
+width: 50vmin;
+height: 50vmin;
+padding: 10px;
+margin: 5vmin auto 0;
+
+border: 1px solid #ccc;
+
+background-color:#f8f5f5;
+
+position: relative;
+}
+
+.card::before,
+.card::after{
+    content: '';
+    width: 50vmin;
+    height: 50vmin;
+    display: block;
+    border: 1px solid #969393;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card::before{
+    background-color:rgb(250, 253, 249);
+    z-index: -1;
+    transform: rotate(3deg);
+    translate:(-1);
+}
+.card:nth-child(3n)::before{
+    background-color:rgb(191, 191, 168)
+}
+.card::after{
+    background-color:rgb(243, 247, 246);
+    z-index: -3;
+    transform: rotate(2deg);
+    translate: (-2);
+}
+
+.card-title{}
+.card-content{}
